@@ -28,4 +28,12 @@ public class Sample31Controller {
   public String sample33() {
     return "sample33.html";
   }
+
+  @PostMapping("/sample3/step6")
+  public String sample36(@RequestParam Integer hiku1, @RequestParam Integer hiku2, ModelMap model) {
+    int kekka = hiku1 - hiku2;
+    model.addAttribute("hikukekka", kekka);
+    return "sample33.html";
+  }
+
 }
